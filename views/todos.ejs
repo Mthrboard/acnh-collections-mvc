@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACNH Collection Tracker</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://kit.fontawesome.com/13471d8c05.js" crossorigin="anonymous"></script>
+	<!-- GOOGLE FONTS -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="topBar">
+        <section id="headerTopLeft">
+            <a href="/"><img id="headerImg" src="/images/acnhLogo.png" alt="Animal Crossing: New Horizons"></a>
+        </section>
+        
+        <section id="headerTopRight">
+            <h2><%= user.userName %></h2>
+            <a href="/logout">Logout</a>
+        </section>    
+        
+    </header>
+    <header class="navBar">
+			<nav class="mytabs">
+
+                <!--**********DAILY TAKS************-->
+                <input type="radio" id="tasksTab" name="mytabs" checked="checked">
+                <label for="tasksTab">Tasks</label>
+                <section class="tab">
+                    <h2>Daily Tasks</h2>
+                    <!--********TRACKER*************-->
+                    <main id="clear">
+                        <button id="clearTasks">Clear Tasks</button>
+                    </main>
+                    <main id="progress">
+                        <label for="file" id="collectionText">Task Progress:</label>
+                        <span id="percent">0%</span>
+                        <progress id="file" max="12" value="0"> 0% </progress>
+                    </main>
+                    <main id="taskmain1">
+				
+                        <div id="taskdiv1" class="false">
+                            <img src="images/nookStop.PNG" id="task1" class="images" name="Check In At Nook Stop">
+                            <h4>Check In At Nook Stop</h4>
+                        </div>
+                        <div id="taskdiv2" class="false">
+                            <img src="images/timmyTommy.png" id="task2" class="images" name="Visit Nook's Cranny">
+                            <h4>Visit Nook's Cranny</h4>
+                        </div>
+                        <div id="taskdiv3" class="false">
+                            <img src="images/abelSisters.png" id="task3" class="images" name="Visit Abel Sisters">
+                            <h4>Visit Abel Sisters</h4>
+                        </div>
+                        <div id="taskdiv4" class="false">
+                            <img src="images/brewster.png" id="task4" class="images" name="Visit Brewster">
+                            <h4>Visit Brewster</h4>
+                        </div>
+                        <div id="taskdiv5" class="false">
+                            <img src="images/bells.PNG" id="task5" class="images" name="Money Tree">
+                            <h4>Money Tree</h4>
+                        </div>
+                        <div id="taskdiv6" class="false">
+                            <img src="images/rock.PNG" id="task6" class="images" name="Find Money Rock">
+                            <h4>Find Money Rock</h4>
+                        </div>
+                        <div id="taskdiv7" class="false">
+                            <img src="images/fossil.PNG" id="task7" class="images" name="Fossils">
+                            <h4>Find Fossils</h4>
+                        </div>
+                        <div id="taskdiv8" class="false">
+                            <img src="images/messageBottle.png" id="task8" class="images" name="Message Bottles">
+                            <h4>Message Bottles</h4>
+                        </div>
+                        <div id="taskdiv9" class="false">
+                            <img src="images/visitors.PNG" id="task9" class="images" name="Talk to Visitors">
+                            <h4>Talk to Visitors</h4>
+                        </div>
+                        <div id="taskdiv10" class="false">
+                            <img src="images/neighbors.png" id="task10" class="images" name="Talk to Neighbors">
+                            <h4>Talk to Neighbors</h4>
+                        </div>
+                        
+                        <div id="taskdiv11" class="false">
+                            <img src="images/Harvey.png" id="task11" class="images" name="Harvey">
+                            <h4>Visit Harv's Island</h4>
+                        </div>
+                        <div id="taskdiv12" class="false">
+                            <img src="images/fun.png" id="task12" class="images" name="Have Fun">
+                            <h4>Have Fun</h4>
+                            <span></span>
+                        </div>
+                        
+            
+                    </main>
+                </section>
+
+
+                <!--**********MUSIC************-->
+                <input type="radio" id="musicTab" name="mytabs">
+                <label for="musicTab">Music</label>
+                <section class="tab">
+                    <h2>K.K. Slider Music</h2>
+                    <main id="musicProgress">
+                        <label for="musicFile" id="collectionText">Collection Progress:</label>
+                        <span id="percent">0%</span>
+                        <progress id="file" max="107" value="0"> 0% </progress>
+                    </main>
+                    <main id="musicMain1">
+                            <div id="div1"><img src="https://acnhapi.com/v1/images/songs/1" id="image1" class="images"><h4>Agent K.K.</h4></div><div id="div2"><img src="https://acnhapi.com/v1/images/songs/2" id="image2" class="images"><h4>Aloha K.K.</h4></div><div id="div3"><img src="https://acnhapi.com/v1/images/songs/3" id="image3" class="images"><h4>Animal City</h4></div><div id="div4"><img src="https://acnhapi.com/v1/images/songs/4" id="image4" class="images"><h4>Bubblegum K.K.</h4></div><div id="div5"><img src="https://acnhapi.com/v1/images/songs/5" id="image5" class="images"><h4>Café K.K.</h4></div><div id="div6"><img src="https://acnhapi.com/v1/images/songs/6" id="image6" class="images"><h4>Comrade K.K.</h4></div><div id="div7"><img src="https://acnhapi.com/v1/images/songs/7" id="image7" class="images"><h4>DJ K.K.</h4></div><div id="div8"><img src="https://acnhapi.com/v1/images/songs/8" id="image8" class="images"><h4>Drivin'</h4></div><div id="div9"><img src="https://acnhapi.com/v1/images/songs/9" id="image9" class="images"><h4>Farewell</h4></div><div id="div10"><img src="https://acnhapi.com/v1/images/songs/10" id="image10" class="images"><h4>Forest Life</h4></div>
+                            
+                            <div id="div11"><img src="https://acnhapi.com/v1/images/songs/11" id="image11" class="images"><h4>Go K.K. Rider</h4></div><div id="div12"><img src="https://acnhapi.com/v1/images/songs/12" id="image12" class="images"><h4>Hypno K.K.</h4></div><div id="div13"><img src="https://acnhapi.com/v1/images/songs/13" id="image13" class="images"><h4>I Love You</h4></div><div id="div14"><img src="https://acnhapi.com/v1/images/songs/14" id="image14" class="images"><h4>Imperial K.K.</h4></div><div id="div15"><img src="https://acnhapi.com/v1/images/songs/15" id="image15" class="images"><h4>K.K. Adventure</h4></div>
+                            <div id="div16"><img src="https://acnhapi.com/v1/images/songs/16" id="image16" class="images"><h4>K.K. Aria</h4></div>
+                            <div id="div17"><img src="https://acnhapi.com/v1/images/songs/17" id="image17" class="images"><h4>K.K. Ballad</h4></div>
+                            <div id="div103"><img src="https://dodo.ac/np/images/thumb/b/b9/K.K._Bashment_NH_Texture.png/256px-K.K._Bashment_NH_Texture.png" id="image103" class="images"><h4>K.K. Bashment</h4></div>
+                            <div id="div18"><img src="https://acnhapi.com/v1/images/songs/18" id="image18" class="images"><h4>K.K. Bazaar</h4></div><div id="div19"><img src="https://acnhapi.com/v1/images/songs/19" id="image19" class="images"><h4>K.K. Birthday</h4></div><div id="div20"><img src="https://acnhapi.com/v1/images/songs/20" id="image20" class="images"><h4>K.K. Blues</h4></div><div id="div21"><img src="https://acnhapi.com/v1/images/songs/21" id="image21" class="images"><h4>K.K. Bossa</h4></div>
+                            <div id="div105"><img src="https://dodo.ac/np/images/thumb/d/db/K.K._Break_NH_Texture.png/256px-K.K._Break_NH_Texture.png" id="image105" class="images"><h4>K.K. Break</h4></div>
+                            <div id="div22"><img src="https://acnhapi.com/v1/images/songs/22" id="image22" class="images"><h4>K.K. Calypso</h4></div><div id="div23"><img src="https://acnhapi.com/v1/images/songs/23" id="image23" class="images"><h4>K.K. Casbah</h4></div>
+                            <div id="div100"><img src="https://dodo.ac/np/images/thumb/a/a2/Chillwave_NH_Texture.png/256px-Chillwave_NH_Texture.png" id="image100" class="images"><h4>K.K. Chillwave</h4></div>
+                            <div id="div24"><img src="https://acnhapi.com/v1/images/songs/24" id="image24" class="images"><h4>K.K. Chorale</h4></div>
+                            <div id="div99"><img src="https://dodo.ac/np/images/thumb/2/28/K.K._Chorinho_NH_Texture.png/256px-K.K._Chorinho_NH_Texture.png" id="image99" class="images"><h4>K.K. Chorinho</h4></div>
+                            <div id="div25"><img src="https://acnhapi.com/v1/images/songs/25" id="image25" class="images"><h4>K.K. Condor</h4></div><div id="div26"><img src="https://acnhapi.com/v1/images/songs/26" id="image26" class="images"><h4>K.K. Country</h4></div><div id="div27"><img src="https://acnhapi.com/v1/images/songs/27" id="image27" class="images"><h4>K.K. Cruisin'</h4></div><div id="div28"><img src="https://acnhapi.com/v1/images/songs/28" id="image28" class="images"><h4>K.K. D&amp;B</h4></div><div id="div29"><img src="https://acnhapi.com/v1/images/songs/29" id="image29" class="images"><h4>K.K. Dirge</h4></div><div id="div30"><img src="https://acnhapi.com/v1/images/songs/30" id="image30" class="images"><h4>K.K. Disco</h4></div><div id="div31"><img src="https://acnhapi.com/v1/images/songs/31" id="image31" class="images"><h4>K.K. Dixie</h4></div>
+                            <div id="div101"><img src="https://dodo.ac/np/images/9/9b/K.K._Dub_NH_Texture.png" id="image101" class="images"><h4>K.K. Dub</h4></div>
+                            <div id="div32"><img src="https://acnhapi.com/v1/images/songs/32" id="image32" class="images"><h4>K.K. Étude</h4></div><div id="div33"><img src="https://acnhapi.com/v1/images/songs/33" id="image33" class="images"><h4>K.K. Faire</h4></div><div id="div34"><img src="https://acnhapi.com/v1/images/songs/34" id="image34" class="images"><h4>K.K. Flamenco</h4></div><div id="div35"><img src="https://acnhapi.com/v1/images/songs/35" id="image35" class="images"><h4>K.K. Folk</h4></div>
+                            <div id="div96"><img src="https://dodo.ac/np/images/4/4c/K.K._Fugue_NH_Texture.png" id="image96" class="images"><h4>K.K. Fugue</h4></div><div id="div36"><img src="https://acnhapi.com/v1/images/songs/36" id="image36" class="images"><h4>K.K. Fusion</h4></div><div id="div37"><img src="https://acnhapi.com/v1/images/songs/37" id="image37" class="images"><h4>K.K. Groove</h4></div><div id="div38"><img src="https://acnhapi.com/v1/images/songs/38" id="image38" class="images"><h4>K.K. Gumbo</h4></div>
+                            <div id="div104"><img src="https://dodo.ac/np/images/thumb/a/a9/K.K._Hop_NH_Texture.png/256px-K.K._Hop_NH_Texture.png" id="image104" class="images"><h4>K.K. Hop</h4></div>
+                            <div id="div39"><img src="https://acnhapi.com/v1/images/songs/39" id="image39" class="images"><h4>K.K. House</h4></div><div id="div40"><img src="https://acnhapi.com/v1/images/songs/40" id="image40" class="images"><h4>K.K. Island</h4></div><div id="div41"><img src="https://acnhapi.com/v1/images/songs/41" id="image41" class="images"><h4>K.K. Jazz</h4></div><div id="div42"><img src="https://acnhapi.com/v1/images/songs/42" id="image42" class="images"><h4>K.K. Jongara</h4></div>
+                            <div id="div106"><img src="https://dodo.ac/np/images/thumb/8/8d/K.K._Khoomei_NH_Texture.png/256px-K.K._Khoomei_NH_Texture.png" id="image106" class="images"><h4>K.K. Khoomei</h4></div>
+                            <div id="div43"><img src="https://acnhapi.com/v1/images/songs/43" id="image43" class="images"><h4>K.K. Lament</h4></div><div id="div44"><img src="https://acnhapi.com/v1/images/songs/44" id="image44" class="images"><h4>K.K. Love Song</h4></div>
+                            <div id="div102"><img src="https://dodo.ac/np/images/thumb/6/62/K.K._Lovers_NH_Texture.png/256px-K.K._Lovers_NH_Texture.png" id="image102" class="images"><h4>K.K. Lovers</h4></div>
+                            <div id="div45"><img src="https://acnhapi.com/v1/images/songs/45" id="image45" class="images"><h4>K.K. Lullaby</h4></div><div id="div46"><img src="https://acnhapi.com/v1/images/songs/46" id="image46" class="images"><h4>K.K. Mambo</h4></div><div id="div47"><img src="https://acnhapi.com/v1/images/songs/47" id="image47" class="images"><h4>K.K. Marathon</h4></div><div id="div48"><img src="https://acnhapi.com/v1/images/songs/48" id="image48" class="images"><h4>K.K. March</h4></div><div id="div49"><img src="https://acnhapi.com/v1/images/songs/49" id="image49" class="images"><h4>K.K. Mariachi</h4></div><div id="div50"><img src="https://acnhapi.com/v1/images/songs/50" id="image50" class="images"><h4>K.K. Metal</h4></div><div id="div51"><img src="https://acnhapi.com/v1/images/songs/51" id="image51" class="images"><h4>K.K. Milonga</h4></div><div id="div52"><img src="https://acnhapi.com/v1/images/songs/52" id="image52" class="images"><h4>K.K. Moody</h4></div><div id="div53"><img src="https://acnhapi.com/v1/images/songs/53" id="image53" class="images"><h4>K.K. Oasis</h4></div><div id="div54"><img src="https://acnhapi.com/v1/images/songs/54" id="image54" class="images"><h4>K.K. Parade</h4></div>
+                            <div id="div97"><img src="https://dodo.ac/np/images/a/af/K.K._Polka_NH_Texture.png" id="image97" class="images"><h4>K.K. Polka</h4></div>
+                            <div id="div55"><img src="https://acnhapi.com/v1/images/songs/55" id="image55" class="images"><h4>K.K. Ragtime</h4></div><div id="div56"><img src="https://acnhapi.com/v1/images/songs/56" id="image56" class="images"><h4>K.K. Rally</h4></div><div id="div57"><img src="https://acnhapi.com/v1/images/songs/57" id="image57" class="images"><h4>K.K. Reggae</h4></div>
+                            <div id="div107"><img src="https://dodo.ac/np/images/thumb/8/8e/K.K._Robot_Synth_NH_Texture.png/256px-K.K._Robot_Synth_NH_Texture.png" id="image107" class="images"><h4>K.K. Robot Synth</h4></div>
+                            <div id="div58"><img src="https://acnhapi.com/v1/images/songs/58" id="image58" class="images"><h4>K.K. Rock</h4></div><div id="div59"><img src="https://acnhapi.com/v1/images/songs/59" id="image59" class="images"><h4>K.K. Rockabilly</h4></div><div id="div60"><img src="https://acnhapi.com/v1/images/songs/60" id="image60" class="images"><h4>K.K. Safari</h4></div><div id="div61"><img src="https://acnhapi.com/v1/images/songs/61" id="image61" class="images"><h4>K.K. Salsa</h4></div><div id="div62"><img src="https://acnhapi.com/v1/images/songs/62" id="image62" class="images"><h4>K.K. Samba</h4></div><div id="div63"><img src="https://acnhapi.com/v1/images/songs/63" id="image63" class="images"><h4>K.K. Ska</h4></div>
+                            <div id="div98"><img src="https://dodo.ac/np/images/5/5a/K.K._Slack-Key_NH_Texture.png" id="image98" class="images"><h4>K.K. Slack-Key</h4></div>
+                            <div id="div64"><img src="https://acnhapi.com/v1/images/songs/64" id="image64" class="images"><h4>K.K. Sonata</h4></div><div id="div65"><img src="https://acnhapi.com/v1/images/songs/65" id="image65" class="images"><h4>K.K. Song</h4></div><div id="div66"><img src="https://acnhapi.com/v1/images/songs/66" id="image66" class="images"><h4>K.K. Soul</h4></div><div id="div67"><img src="https://acnhapi.com/v1/images/songs/67" id="image67" class="images"><h4>K.K. Steppe</h4></div><div id="div68"><img src="https://acnhapi.com/v1/images/songs/68" id="image68" class="images"><h4>K.K. Stroll</h4></div><div id="div69"><img src="https://acnhapi.com/v1/images/songs/69" id="image69" class="images"><h4>K.K. Swing</h4></div><div id="div70"><img src="https://acnhapi.com/v1/images/songs/70" id="image70" class="images"><h4>K.K. Synth</h4></div><div id="div71"><img src="https://acnhapi.com/v1/images/songs/71" id="image71" class="images"><h4>K.K. Tango</h4></div><div id="div72"><img src="https://acnhapi.com/v1/images/songs/72" id="image72" class="images"><h4>K.K. Technopop</h4></div><div id="div73"><img src="https://acnhapi.com/v1/images/songs/73" id="image73" class="images"><h4>K.K. Waltz</h4></div><div id="div74"><img src="https://acnhapi.com/v1/images/songs/74" id="image74" class="images"><h4>K.K. Western</h4></div><div id="div75"><img src="https://acnhapi.com/v1/images/songs/75" id="image75" class="images"><h4>King K.K.</h4></div><div id="div76"><img src="https://acnhapi.com/v1/images/songs/76" id="image76" class="images"><h4>Lucky K.K.</h4></div><div id="div77"><img src="https://acnhapi.com/v1/images/songs/77" id="image77" class="images"><h4>Marine Song 2001</h4></div><div id="div78"><img src="https://acnhapi.com/v1/images/songs/78" id="image78" class="images"><h4>Mountain Song</h4></div><div id="div79"><img src="https://acnhapi.com/v1/images/songs/79" id="image79" class="images"><h4>Mr. K.K.</h4></div><div id="div80"><img src="https://acnhapi.com/v1/images/songs/80" id="image80" class="images"><h4>My Place</h4></div><div id="div81"><img src="https://acnhapi.com/v1/images/songs/81" id="image81" class="images"><h4>Neapolitan</h4></div><div id="div82"><img src="https://acnhapi.com/v1/images/songs/82" id="image82" class="images"><h4>Only Me</h4></div><div id="div83"><img src="https://acnhapi.com/v1/images/songs/83" id="image83" class="images"><h4>Pondering</h4></div><div id="div84"><img src="https://acnhapi.com/v1/images/songs/84" id="image84" class="images"><h4>Rockin' K.K.</h4></div><div id="div85"><img src="https://acnhapi.com/v1/images/songs/85" id="image85" class="images"><h4>Soulful K.K.</h4></div><div id="div86"><img src="https://acnhapi.com/v1/images/songs/86" id="image86" class="images"><h4>Space K.K.</h4></div><div id="div87"><img src="https://acnhapi.com/v1/images/songs/87" id="image87" class="images"><h4>Spring Blossoms</h4></div><div id="div88"><img src="https://acnhapi.com/v1/images/songs/88" id="image88" class="images"><h4>Stale Cupcakes</h4></div><div id="div89"><img src="https://acnhapi.com/v1/images/songs/89" id="image89" class="images"><h4>Steep Hill</h4></div><div id="div90"><img src="https://acnhapi.com/v1/images/songs/90" id="image90" class="images"><h4>Surfin' K.K.</h4></div><div id="div91"><img src="https://acnhapi.com/v1/images/songs/91" id="image91" class="images"><h4>The K. Funk</h4></div><div id="div92"><img src="https://acnhapi.com/v1/images/songs/92" id="image92" class="images"><h4>To the Edge</h4></div><div id="div93"><img src="https://acnhapi.com/v1/images/songs/93" id="image93" class="images"><h4>Two Days Ago</h4></div><div id="div94"><img src="https://acnhapi.com/v1/images/songs/94" id="image94" class="images"><h4>Wandering</h4></div><div id="div95"><img src="https://acnhapi.com/v1/images/songs/95" id="image95" class="images"><h4>Welcome Horizons</h4></div>
+                    </main>
+                </section>
+
+
+                <!--**********GYROIDS************-->
+                <input type="radio" id="gyroidsTab" name="mytabs">
+                <label for="gyroidsTab">Gyroids</label>
+                <section class="tab">
+                    <h2>Gyroids</h2>
+                    <main id="progress">
+                        <label for="file" id="collectionText">Collection Progress:</label>
+                        <span id="percent">0%</span>
+                        <progress id="file" max="36" value="0"> 0% </progress>
+                    </main>
+                    <main id="gyroidMain1">
+                        <div id="div1">
+                            <img src="https://img.game8.co/3443089/333b4fda26f2a08da38c8907558143bf.png/show" id="gyroidNum1" class="images" name="Aluminoid">
+                            <h4>Aluminoid</h4>
+                        </div>
+                        <div id="div2">
+                            <img src="https://img.game8.co/3443102/6c5a83be0a1b9c63ac3230e2c20df14e.png/show" id="gyroidNum2" class="images" name="Arfoid">
+                            <h4>Arfoid</h4>
+                        </div>
+                        <div id="div3">
+                            <img src="https://img.game8.co/3443093/b414ed4640e786bab54d928b417f1617.png/show" id="gyroidNum3" class="images" name="Babbloid">
+                            <h4>Babbloid</h4>
+                        </div>
+                        <div id="div4">
+                            <img src="https://img.game8.co/3443162/86359e2c93a524efacb90774ec97975b.png/show" id="gyroidNum4" class="images" name="Bendoid">
+                            <h4>Bendoid</h4>
+                        </div>
+                        <div id="div5">
+                            <img src="https://img.game8.co/3443120/65b623c7798792395476cd72061748b7.png/show" id="gyroidNum5" class="images" name="Bloopoid">
+                            <h4>Bloopoid</h4>
+                        </div>
+                        <div id="div6">
+                            <img src="https://img.game8.co/3443107/b9bfd12f3c7751a1704c8c1691101dee.png/show" id="gyroidNum6" class="images" name="Boioingoid">
+                            <h4>Boioingoid</h4>
+                        </div>
+                        <div id="div7">
+                            <img src="https://img.game8.co/3443113/580a11689fcafca5984221afb8efe9d0.png/show" id="gyroidNum7" class="images" name="Boomoid">
+                            <h4>Boomoid</h4>
+                        </div>
+                        <div id="div8">
+                            <img src="https://img.game8.co/3443319/764088279fa3a01702dd9ae327228081.png/show" id="gyroidNum8" class="images" name="Brewstoid">
+                            <h4>Brewstoid</h4>
+                        </div>
+                        <div id="div9">
+                            <img src="https://img.game8.co/3443136/e546b9bebe53d7ab9d0c498b0ce91f37.png/show" id="gyroidNum9" class="images" name="Bubbloid">
+                            <h4>Bubbloid</h4>
+                        </div>
+                        <div id="div10">
+                            <img src="https://img.game8.co/3443111/aad587de254370b170ba12602e13f712.png/show" id="gyroidNum10" class="images" name="Bwongoid">
+                            <h4>Bwongoid</h4>
+                        </div>
+                        <div id="div11">
+                            <img src="https://img.game8.co/3443140/8af8e8486f2362d9cbd561da716df4b9.png/show" id="gyroidNum11" class="images" name="Clatteroid">
+                            <h4>Clatteroid</h4>
+                        </div>
+                        <div id="div12">
+                            <img src="https://img.game8.co/3443142/e8ca1e877b3b930514ccc2e821a64d52.png/show" id="gyroidNum12" class="images" name="Crumploid">
+                            <h4>Crumploid</h4>
+                        </div>
+                        <div id="div13">
+                            <img src="https://img.game8.co/3443158/bc3b1e27e3eb9c02219d24d75507138e.png/show" id="gyroidNum13" class="images" name="Dootoid">
+                            <h4>Dootoid</h4>
+                        </div>
+                        <div id="div14">
+                            <img src="https://img.game8.co/3443167/13f94663c826301b86c3eaeaca154b6c.png/show" id="gyroidNum14" class="images" name="Drummoid">
+                            <h4>Drummoid</h4>
+                        </div>
+                        <div id="div15">
+                            <img src="https://img.game8.co/3443187/d00628d7583a6e20abdac0ec56bb2366.png/show" id="gyroidNum15" class="images" name="Flutteroid">
+                            <h4>Flutteroid</h4>
+                        </div>
+                        <div id="div16">
+                            <img src="https://img.game8.co/3443206/d9c4b8591a8047a5a919eb1e11709d0e.png/show" id="gyroidNum16" class="images" name="Jingloid">
+                            <h4>Jingloid</h4>
+                        </div>
+                        <div id="div17">
+                            <img src="https://img.game8.co/3443175/6643570d6bb475fd49906916ac0bc92b.png/show" id="gyroidNum17" class="images" name="Laseroid">
+                            <h4>Laseroid</h4>
+                        </div>
+                        <div id="div18">
+                            <img src="https://img.game8.co/3443184/7e4c65eaa501691202ec3b07c2132b70.png/show" id="gyroidNum18" class="images" name="Oinkoid">
+                            <h4>Oinkoid</h4>
+                        </div>
+                        <div id="div19">
+                            <img src="https://img.game8.co/3443231/66230de10eac61a124acfe541123f484.png/show" id="gyroidNum19" class="images" name="Petaloid">
+                            <h4>Petaloid</h4>
+                        </div>
+                        <div id="div20">
+                            <img src="https://img.game8.co/3443251/0df847fd082d288cb8e5011d8a0bacf0.png/show" id="gyroidNum20" class="images" name="Rattloid">
+                            <h4>Rattloid</h4>
+                        </div>
+                        <div id="div21">
+                            <img src="https://img.game8.co/3443164/b71087a3d94427be97f85a120cf2d544.png/show" id="gyroidNum21" class="images" name="Ringoid">
+                            <h4>Ringoid</h4>
+                        </div>
+                        <div id="div22">
+                            <img src="https://img.game8.co/3443191/91af951ed6cd04057e468a08bf2ebe01.png/show" id="gyroidNum22" class="images" name="Rumbloid">
+                            <h4>Rumbloid</h4>
+                        </div>
+                        <div id="div23">
+                            <img src="https://img.game8.co/3443282/681d5f99097295dc4d273e8cae6a7035.png/show" id="gyroidNum23" class="images" name="Scatteroid">
+                            <h4>Scatteroid</h4>
+                        </div>
+                        <div id="div24">
+                            <img src="https://img.game8.co/3443283/9e9801ec53727bd18bae1a4c22f94dda.png/show" id="gyroidNum24" class="images" name="Spikenoid">
+                            <h4>Spikenoid</h4>
+                        </div>
+                        <div id="div25">
+                            <img src="https://img.game8.co/3443212/58f311d05f77b88ef728ae758c0553c7.png/show" id="gyroidNum25" class="images" name="Sproingoid">
+                            <h4>Sproingoid</h4>
+                        </div>
+                        <div id="div26">
+                            <img src="https://img.game8.co/3443217/dc24d9ed8f5985127d8d830ce3b0e94c.png/show" id="gyroidNum26" class="images" name="Squeakoid">
+                            <h4>Squeakoid</h4>
+                        </div>
+                        <div id="div27">
+                            <img src="https://img.game8.co/3443218/aa90b4d9b2677bfc9df318fc4e64be0d.png/show" id="gyroidNum27" class="images" name="Squeezoid">
+                            <h4>Squeezoid</h4>
+                        </div>
+                        <div id="div28">
+                            <img src="https://img.game8.co/3443236/f1e4441b18af501cafe4790f80ed3f59.png/show" id="gyroidNum28" class="images" name="Stelloid">
+                            <h4>Stelloid</h4>
+                        </div>
+                        <div id="div29">
+                            <img src="https://img.game8.co/3443237/eae4c1c2a3fb9d32a002ac1515c7f289.png/show" id="gyroidNum29" class="images" name="Thwopoid">
+                            <h4>Thwopoid</h4>
+                        </div>
+                        <div id="div30">
+                            <img src="https://img.game8.co/3443240/679813e8fd060b8e8358cac8d436aec4.png/show" id="gyroidNum30" class="images" name="Tockoid">
+                            <h4>Tockoid</h4>
+                        </div>
+                        <div id="div31">
+                            <img src="https://img.game8.co/3443259/7a4cfe6af1e9c638c37a060de3839e0d.png/show" id="gyroidNum31" class="images" name="Tremoloid">
+                            <h4>Tremoloid</h4>
+                        </div>
+                        <div id="div32">
+                            <img src="https://img.game8.co/3443275/de88753b325e2f0aef85d4fb4e527f0b.png/show" id="gyroidNum32" class="images" name="Twangoid">
+                            <h4>Twangoid</h4>
+                        </div>
+                        <div id="div33">
+                            <img src="https://img.game8.co/3443243/94fd679f6b8331dbcc495c173c5cea57.png/show" id="gyroidNum33" class="images" name="Wallopoid">
+                            <h4>Wallopoid</h4>
+                        </div>
+                        <div id="div34">
+                            <img src="https://img.game8.co/3443289/443db73820855f6ece07e8ae917894fd.png/show" id="gyroidNum34" class="images" name="Whirroid">
+                            <h4>Whirroid</h4>
+                        </div>
+                        <div id="div35">
+                            <img src="https://img.game8.co/3443273/497c504a5ccd473b100fc5379e7870a1.png/show" id="gyroidNum35" class="images" name="Whistloid">
+                            <h4>Whistloid</h4>
+                        </div>
+                        <div id="div36">
+                            <img src="https://img.game8.co/3443291/2c5ae96fbb810a5e28f7d86d7566c3c2.png/show" id="gyroidNum36" class="images" name="Xylophoid">
+                            <h4>Xylophoid</h4>
+                        </div>
+                    </main>
+                </section>
+
+
+
+                <!--**********FOSSILS************-->
+                <input type="radio" id="fossilsTab" name="mytabs">
+                <label for="fossilsTab">Fossils</label>
+                <section class="tab">
+                    <h2>Fossils</h2>
+                    <main id="progress">
+                        <label for="file" id="collectionText">Collection Progress:</label>
+                        <span id="percent">0%</span>
+                        <progress id="file" max="73" value="0"> 0% </progress>
+                    </main>
+                    <main id="fossilMain1">
+                             <div id="div1"><img src="https://acnhapi.com/v1/images/fossils/acanthostega" id="image1" class="images"><h4>Acanthostega</h4></div>
+                             <div id="div2"><img src="https://acnhapi.com/v1/images/fossils/amber" id="image2" class="images"><h4>Amber</h4></div><div id="div3"><img src="https://acnhapi.com/v1/images/fossils/ammonite" id="image3" class="images"><h4>Ammonite</h4></div><div id="div4"><img src="https://acnhapi.com/v1/images/fossils/ankylo_skull" id="image4" class="images"><h4>Ankylo skull</h4></div><div id="div5"><img src="https://acnhapi.com/v1/images/fossils/ankylo_tail" id="image5" class="images"><h4>Ankylo tail</h4></div><div id="div6"><img src="https://acnhapi.com/v1/images/fossils/ankylo_torso" id="image6" class="images"><h4>Ankylo torso</h4></div><div id="div7"><img src="https://acnhapi.com/v1/images/fossils/anomalocaris" id="image7" class="images"><h4>Anomalocaris</h4></div><div id="div8"><img src="https://acnhapi.com/v1/images/fossils/archaeopteryx" id="image8" class="images"><h4>Archaeopteryx</h4></div><div id="div9"><img src="https://acnhapi.com/v1/images/fossils/archelon_skull" id="image9" class="images"><h4>Archelon skull</h4></div><div id="div10"><img src="https://acnhapi.com/v1/images/fossils/archelon_tail" id="image10" class="images"><h4>Archelon tail</h4></div><div id="div11"><img src="https://acnhapi.com/v1/images/fossils/australopith" id="image11" class="images"><h4>Australopith</h4></div><div id="div12"><img src="https://acnhapi.com/v1/images/fossils/brachio_chest" id="image12" class="images"><h4>Brachio chest</h4></div><div id="div13"><img src="https://acnhapi.com/v1/images/fossils/brachio_pelvis" id="image13" class="images"><h4>Brachio pelvis</h4></div><div id="div14"><img src="https://acnhapi.com/v1/images/fossils/brachio_skull" id="image14" class="images"><h4>Brachio skull</h4></div><div id="div15"><img src="https://acnhapi.com/v1/images/fossils/brachio_tail" id="image15" class="images"><h4>Brachio tail</h4></div><div id="div16"><img src="https://acnhapi.com/v1/images/fossils/coprolite" id="image16" class="images"><h4>Coprolite</h4></div><div id="div17"><img src="https://acnhapi.com/v1/images/fossils/deinony_tail" id="image17" class="images"><h4>Deinony tail</h4></div><div id="div18"><img src="https://acnhapi.com/v1/images/fossils/deinony_torso" id="image18" class="images"><h4>Deinony torso</h4></div><div id="div19"><img src="https://acnhapi.com/v1/images/fossils/dimetrodon_skull" id="image19" class="images"><h4>Dimetrodon skull</h4></div><div id="div20"><img src="https://acnhapi.com/v1/images/fossils/dimetrodon_torso" id="image20" class="images"><h4>Dimetrodon torso</h4></div><div id="div21"><img src="https://acnhapi.com/v1/images/fossils/dinosaur_track" id="image21" class="images"><h4>Dinosaur track</h4></div><div id="div22"><img src="https://acnhapi.com/v1/images/fossils/diplo_chest" id="image22" class="images"><h4>Diplo chest</h4></div><div id="div23"><img src="https://acnhapi.com/v1/images/fossils/diplo_neck" id="image23" class="images"><h4>Diplo neck</h4></div><div id="div24"><img src="https://acnhapi.com/v1/images/fossils/diplo_pelvis" id="image24" class="images"><h4>Diplo pelvis</h4></div><div id="div25"><img src="https://acnhapi.com/v1/images/fossils/diplo_skull" id="image25" class="images"><h4>Diplo skull</h4></div><div id="div26"><img src="https://acnhapi.com/v1/images/fossils/diplo_tail" id="image26" class="images"><h4>Diplo tail</h4></div><div id="div27"><img src="https://acnhapi.com/v1/images/fossils/diplo_tail_tip" id="image27" class="images"><h4>Diplo tail tip</h4></div><div id="div28"><img src="https://acnhapi.com/v1/images/fossils/dunkleosteus" id="image28" class="images"><h4>Dunkleosteus</h4></div><div id="div29"><img src="https://acnhapi.com/v1/images/fossils/eusthenopteron" id="image29" class="images"><h4>Eusthenopteron</h4></div><div id="div30"><img src="https://acnhapi.com/v1/images/fossils/iguanodon_skull" id="image30" class="images"><h4>Iguanodon skull</h4></div><div id="div31"><img src="https://acnhapi.com/v1/images/fossils/iguanodon_tail" id="image31" class="images"><h4>Iguanodon tail</h4></div><div id="div32"><img src="https://acnhapi.com/v1/images/fossils/iguanodon_torso" id="image32" class="images"><h4>Iguanodon torso</h4></div><div id="div33"><img src="https://acnhapi.com/v1/images/fossils/juramaia" id="image33" class="images"><h4>Juramaia</h4></div><div id="div34"><img src="https://acnhapi.com/v1/images/fossils/left_megalo_side" id="image34" class="images"><h4>Left megalo side</h4></div><div id="div35"><img src="https://acnhapi.com/v1/images/fossils/left_ptera_wing" id="image35" class="images"><h4>Left ptera wing</h4></div><div id="div36"><img src="https://acnhapi.com/v1/images/fossils/left_quetzal_wing" id="image36" class="images"><h4>Left quetzal wing</h4></div><div id="div37"><img src="https://acnhapi.com/v1/images/fossils/mammoth_skull" id="image37" class="images"><h4>Mammoth skull</h4></div><div id="div38"><img src="https://acnhapi.com/v1/images/fossils/mammoth_torso" id="image38" class="images"><h4>Mammoth torso</h4></div><div id="div39"><img src="https://acnhapi.com/v1/images/fossils/megacero_skull" id="image39" class="images"><h4>Megacero skull</h4></div><div id="div40"><img src="https://acnhapi.com/v1/images/fossils/megacero_tail" id="image40" class="images"><h4>Megacero tail</h4></div><div id="div41"><img src="https://acnhapi.com/v1/images/fossils/megacero_torso" id="image41" class="images"><h4>Megacero torso</h4></div><div id="div42"><img src="https://acnhapi.com/v1/images/fossils/myllokunmingia" id="image42" class="images"><h4>Myllokunmingia</h4></div><div id="div43"><img src="https://acnhapi.com/v1/images/fossils/ophthalmo_skull" id="image43" class="images"><h4>Ophthalmo skull</h4></div><div id="div44"><img src="https://acnhapi.com/v1/images/fossils/ophthalmo_torso" id="image44" class="images"><h4>Ophthalmo torso</h4></div><div id="div45"><img src="https://acnhapi.com/v1/images/fossils/pachy_skull" id="image45" class="images"><h4>Pachy skull</h4></div><div id="div46"><img src="https://acnhapi.com/v1/images/fossils/pachy_tail" id="image46" class="images"><h4>Pachy tail</h4></div><div id="div47"><img src="https://acnhapi.com/v1/images/fossils/parasaur_skull" id="image47" class="images"><h4>Parasaur skull</h4></div><div id="div48"><img src="https://acnhapi.com/v1/images/fossils/parasaur_tail" id="image48" class="images"><h4>Parasaur tail</h4></div><div id="div49"><img src="https://acnhapi.com/v1/images/fossils/parasaur_torso" id="image49" class="images"><h4>Parasaur torso</h4></div><div id="div50"><img src="https://acnhapi.com/v1/images/fossils/plesio_skull" id="image50" class="images"><h4>Plesio skull</h4></div><div id="div51"><img src="https://acnhapi.com/v1/images/fossils/plesio_tail" id="image51" class="images"><h4>Plesio tail</h4></div><div id="div52"><img src="https://acnhapi.com/v1/images/fossils/plesio_torso" id="image52" class="images"><h4>Plesio torso</h4></div><div id="div53"><img src="https://acnhapi.com/v1/images/fossils/ptera_body" id="image53" class="images"><h4>Ptera body</h4></div><div id="div54"><img src="https://acnhapi.com/v1/images/fossils/quetzal_torso" id="image54" class="images"><h4>Quetzal torso</h4></div><div id="div55"><img src="https://acnhapi.com/v1/images/fossils/right_megalo_side" id="image55" class="images"><h4>Right megalo side</h4></div><div id="div56"><img src="https://acnhapi.com/v1/images/fossils/right_ptera_wing" id="image56" class="images"><h4>Right ptera wing</h4></div><div id="div57"><img src="https://acnhapi.com/v1/images/fossils/right_quetzal_wing" id="image57" class="images"><h4>Right quetzal wing</h4></div><div id="div58"><img src="https://acnhapi.com/v1/images/fossils/sabertooth_skull" id="image58" class="images"><h4>Sabertooth skull</h4></div><div id="div59"><img src="https://acnhapi.com/v1/images/fossils/sabertooth_tail" id="image59" class="images"><h4>Sabertooth tail</h4></div><div id="div60"><img src="https://acnhapi.com/v1/images/fossils/shark-tooth_pattern" id="image60" class="images"><h4>Shark-tooth pattern</h4></div><div id="div61"><img src="https://acnhapi.com/v1/images/fossils/spino_skull" id="image61" class="images"><h4>Spino skull</h4></div><div id="div62"><img src="https://acnhapi.com/v1/images/fossils/spino_tail" id="image62" class="images"><h4>Spino tail</h4></div><div id="div63"><img src="https://acnhapi.com/v1/images/fossils/spino_torso" id="image63" class="images"><h4>Spino torso</h4></div><div id="div64"><img src="https://acnhapi.com/v1/images/fossils/stego_skull" id="image64" class="images"><h4>Stego skull</h4></div><div id="div65"><img src="https://acnhapi.com/v1/images/fossils/stego_tail" id="image65" class="images"><h4>Stego tail</h4></div><div id="div66"><img src="https://acnhapi.com/v1/images/fossils/stego_torso" id="image66" class="images"><h4>Stego torso</h4></div><div id="div67"><img src="https://acnhapi.com/v1/images/fossils/trex_skull" id="image67" class="images"><h4>T. rex skull</h4></div><div id="div68"><img src="https://acnhapi.com/v1/images/fossils/trex_tail" id="image68" class="images"><h4>T. rex tail</h4></div><div id="div69"><img src="https://acnhapi.com/v1/images/fossils/trex_torso" id="image69" class="images"><h4>T. rex torso</h4></div><div id="div70"><img src="https://acnhapi.com/v1/images/fossils/tricera_skull" id="image70" class="images"><h4>Tricera skull</h4></div><div id="div71"><img src="https://acnhapi.com/v1/images/fossils/tricera_tail" id="image71" class="images"><h4>Tricera tail</h4></div><div id="div72"><img src="https://acnhapi.com/v1/images/fossils/tricera_torso" id="image72" class="images"><h4>Tricera torso</h4></div><div id="div73"><img src="https://acnhapi.com/v1/images/fossils/trilobite" id="image73" class="images"><h4>Trilobite</h4></div>
+                    </main>
+                </section>
+
+
+                <!--**********ART************-->
+                <input type="radio" id="artTab" name="mytabs">
+                <label for="artTab">Art</label>
+                <section class="tab">
+                    <h2>Art</h2>
+                    <main id="progress">
+                        <label for="file" id="collectionText">Collection Progress:</label>
+                        <span id="percent">0%</span>
+                        <progress id="file" max="43" value="0"> 0% </progress>
+                    </main>
+                    <main id="main1">
+                            <div id="div1"><img src="https://acnhapi.com/v1/images/art/academic_painting" id="image1" class="images"><h4>Academic painting</h4></div><div id="div2"><img src="https://acnhapi.com/v1/images/art/amazing_painting" id="image2" class="images"><h4>Amazing painting</h4></div><div id="div3" style="color: black;"><img src="https://acnhapi.com/v1/images/art/ancient_statue" id="image3" class="images"><h4>Ancient statue</h4></div><div id="div4"><img src="https://acnhapi.com/v1/images/art/basic_painting" id="image4" class="images"><h4>Basic painting</h4></div><div id="div5"><img src="https://acnhapi.com/v1/images/art/beautiful_statue" id="image5" class="images"><h4>Beautiful statue</h4></div><div id="div6"><img src="https://acnhapi.com/v1/images/art/calm_painting" id="image6" class="images"><h4>Calm painting</h4></div><div id="div7"><img src="https://acnhapi.com/v1/images/art/common_painting" id="image7" class="images"><h4>Common painting</h4></div><div id="div8" style="color: black;"><img src="https://acnhapi.com/v1/images/art/detailed_painting" id="image8" class="images"><h4>Detailed painting</h4></div><div id="div9"><img src="https://acnhapi.com/v1/images/art/dynamic_painting" id="image9" class="images"><h4>Dynamic painting</h4></div><div id="div10"><img src="https://acnhapi.com/v1/images/art/familiar_statue" id="image10" class="images"><h4>Familiar statue</h4></div><div id="div11"><img src="https://acnhapi.com/v1/images/art/famous_painting" id="image11" class="images"><h4>Famous painting</h4></div><div id="div12"><img src="https://acnhapi.com/v1/images/art/flowery_painting" id="image12" class="images"><h4>Flowery painting</h4></div><div id="div13"><img src="https://acnhapi.com/v1/images/art/gallant_statue" id="image13" class="images"><h4>Gallant statue</h4></div><div id="div14"><img src="https://acnhapi.com/v1/images/art/glowing_painting" id="image14" class="images"><h4>Glowing painting</h4></div><div id="div15"><img src="https://acnhapi.com/v1/images/art/graceful_painting" id="image15" class="images"><h4>Graceful painting</h4></div><div id="div16"><img src="https://acnhapi.com/v1/images/art/great_statue" id="image16" class="images"><h4>Great statue</h4></div><div id="div17"><img src="https://acnhapi.com/v1/images/art/informative_statue" id="image17" class="images"><h4>Informative statue</h4></div><div id="div18"><img src="https://acnhapi.com/v1/images/art/jolly_painting" id="image18" class="images"><h4>Jolly painting</h4></div><div id="div19"><img src="https://acnhapi.com/v1/images/art/moody_painting" id="image19" class="images"><h4>Moody painting</h4></div><div id="div20"><img src="https://acnhapi.com/v1/images/art/motherly_statue" id="image20" class="images"><h4>Motherly statue</h4></div><div id="div21"><img src="https://acnhapi.com/v1/images/art/moving_painting" id="image21" class="images"><h4>Moving painting</h4></div><div id="div22"><img src="https://acnhapi.com/v1/images/art/mysterious_painting" id="image22" class="images"><h4>Mysterious painting</h4></div><div id="div23"><img src="https://acnhapi.com/v1/images/art/mystic_statue" id="image23" class="images"><h4>Mystic statue</h4></div><div id="div24"><img src="https://acnhapi.com/v1/images/art/nice_painting" id="image24" class="images"><h4>Nice painting</h4></div><div id="div25"><img src="https://acnhapi.com/v1/images/art/perfect_painting" id="image25" class="images"><h4>Perfect painting</h4></div><div id="div26"><img src="https://acnhapi.com/v1/images/art/proper_painting" id="image26" class="images"><h4>Proper painting</h4></div><div id="div27"><img src="https://acnhapi.com/v1/images/art/quaint_painting" id="image27" class="images"><h4>Quaint painting</h4></div><div id="div28"><img src="https://acnhapi.com/v1/images/art/robust_statue" id="image28" class="images"><h4>Robust statue</h4></div><div id="div29"><img src="https://acnhapi.com/v1/images/art/rock-head_statue" id="image29" class="images"><h4>Rock-head statue</h4></div><div id="div30"><img src="https://acnhapi.com/v1/images/art/scary_painting" id="image30" class="images"><h4>Scary painting</h4></div><div id="div31"><img src="https://acnhapi.com/v1/images/art/scenic_painting" id="image31" class="images"><h4>Scenic painting</h4></div><div id="div32"><img src="https://acnhapi.com/v1/images/art/serene_painting" id="image32" class="images"><h4>Serene painting</h4></div><div id="div33"><img src="https://acnhapi.com/v1/images/art/sinking_painting" id="image33" class="images"><h4>Sinking painting</h4></div><div id="div34"><img src="https://acnhapi.com/v1/images/art/solemn_painting" id="image34" class="images"><h4>Solemn painting</h4></div><div id="div35"><img src="https://acnhapi.com/v1/images/art/tremendous_statue" id="image35" class="images"><h4>Tremendous statue</h4></div><div id="div36"><img src="https://acnhapi.com/v1/images/art/twinkling_painting" id="image36" class="images"><h4>Twinkling painting</h4></div><div id="div37"><img src="https://acnhapi.com/v1/images/art/valiant_statue" id="image37" class="images"><h4>Valiant statue</h4></div><div id="div38"><img src="https://acnhapi.com/v1/images/art/warm_painting" id="image38" class="images"><h4>Warm painting</h4></div><div id="div39"><img src="https://acnhapi.com/v1/images/art/warrior_statue" id="image39" class="images"><h4>Warrior statue</h4></div><div id="div40"><img src="https://acnhapi.com/v1/images/art/wild_painting_left_half" id="image40" class="images"><h4>Wild painting left half</h4></div><div id="div41"><img src="https://acnhapi.com/v1/images/art/wild_painting_right_half" id="image41" class="images"><h4>Wild painting right half</h4></div><div id="div42"><img src="https://acnhapi.com/v1/images/art/wistful_painting" id="image42" class="images"><h4>Wistful painting</h4></div><div id="div43"><img src="https://acnhapi.com/v1/images/art/worthy_painting" id="image43" class="images"><h4>Worthy painting</h4></div>
+                    </main>
+                </section>
+
+
+
+                <!--**********UMBRELLAS************-->
+                <input type="radio" id="umbrellasTab" name="mytabs">
+                <label for="umbrellasTab">Umbrellas</label>
+                <section class="tab">
+                    <h2>Umbrellas</h2>
+                    <main id="progress">
+                        <label for="file" id="collectionText">Collection Progress:</label>
+                        <span id="percent">0%</span>
+                        <progress id="file" max="68" value="0"> 0% </progress>
+                    </main>
+                    <main id="main1">
+                        <div id="div1">
+                            <img src="https://dodo.ac/np/images/6/60/Apple_Umbrella_NH_Icon.png" id="umbrellaNum1" class="images" name="Apple">
+                            <h4>Apple</h4>
+                        </div>
+                        <div id="div2">
+                            <img src="https://dodo.ac/np/images/3/3c/Bat_Umbrella_NH_Icon.png" id="umbrellaNum2" class="images" name="Bat">
+                            <h4>Bat</h4>
+                        </div>
+                        <div id="div3">
+                            <img src="https://dodo.ac/np/images/3/35/Beach_Umbrella_NH_Icon.png" id="umbrellaNum3" class="images" name="Beach">
+                            <h4>Beach</h4>
+                        </div>
+                        <div id="div4">
+                            <img src="https://dodo.ac/np/images/4/49/Bear_Umbrella_NH_Icon.png" id="umbrellaNum4" class="images" name="Bear">
+                            <h4>Bear</h4>
+                        </div>
+                        <div id="div5">
+                            <img src="https://dodo.ac/np/images/8/83/Black_Chic_Umbrella_NH_Icon.png" id="umbrellaNum5" class="images" name="Black Chic">
+                            <h4>Black Chic</h4>
+                        </div>
+                        <div id="div6">
+                            <img src="https://dodo.ac/np/images/b/bf/Black_Lace_Umbrella_NH_Icon.png" id="umbrellaNum6" class="images" name="Black Lace">
+                            <h4>Black Lace</h4>
+                        </div>
+                        <div id="div7">
+                            <img src="https://dodo.ac/np/images/a/a1/Blue_Dot_Parasol_NH_Icon.png" id="umbrellaNum7" class="images" name="Blue Dot">
+                            <h4>Blue Dot</h4>
+                        </div>
+                        <div id="div8">
+                            <img src="https://dodo.ac/np/images/a/a4/Blue_Shiny-Bows_Parasol_NH_Icon.png" id="umbrellaNum8" class="images" name="Blue Shiny-Bows">
+                            <h4>Blue Shiny-Bows</h4>
+                        </div>
+                        <div id="div9">
+                            <img src="https://dodo.ac/np/images/9/90/Blue_Umbrella_NH_Icon.png" id="umbrellaNum9" class="images" name="Blue">
+                            <h4>Blue</h4>
+                        </div>
+                        <div id="div10">
+                            <img src="https://dodo.ac/np/images/e/e7/Busted_Umbrella_NH_Icon.png" id="umbrellaNum10" class="images" name="Busted">
+                            <h4>Busted</h4>
+                        </div>
+                        <div id="div11">
+                            <img src="https://dodo.ac/np/images/4/4b/Camo_Umbrella_NH_Icon.png" id="umbrellaNum11" class="images" name="Camo">
+                            <h4>Camo</h4>
+                        </div>
+                        <div id="div12">
+                            <img src="https://dodo.ac/np/images/8/82/Candy_Umbrella_NH_Icon.png" id="umbrellaNum12" class="images" name="Candy">
+                            <h4>Candy</h4>
+                        </div>
+                        <div id="div13">
+                            <img src="https://dodo.ac/np/images/f/f0/Cherry_Umbrella_NH_Icon.png" id="umbrellaNum13" class="images" name="Cherry">
+                            <h4>Cherry</h4>
+                        </div>
+                        <div id="div14">
+                            <img src="https://dodo.ac/np/images/f/ff/Cherry-Blossom_Umbrella_NH_Icon.png" id="umbrellaNum14" class="images" name="Cherry-Blossom">
+                            <h4>Cherry-Blossom</h4>
+                        </div>
+                        <div id="div15">
+                            <img src="https://dodo.ac/np/images/b/b1/DAL_Umbrella_NH_Icon.png" id="umbrellaNum15" class="images" name="DAL">
+                            <h4>DAL</h4>
+                        </div>
+                        <div id="div16">
+                            <img src="https://dodo.ac/np/images/2/21/Eggy_Parasol_NH_Icon.png" id="umbrellaNum16" class="images" name="Eggy">
+                            <h4>Eggy</h4>
+                        </div>
+                        <div id="div17">
+                            <img src="https://dodo.ac/np/images/0/01/Exquisite_Parasol_NH_Icon.png" id="umbrellaNum17" class="images" name="Exquisite">
+                            <h4>Exquisite</h4>
+                        </div>
+                        <div id="div18">
+                            <img src="https://dodo.ac/np/images/1/19/Fairy-Tale_Umbrella_NH_Icon.png" id="umbrellaNum18" class="images" name="Fairy-Tale">
+                            <h4>Fairy-Tale</h4>
+                        </div>
+                        <div id="div19">
+                            <img src="https://dodo.ac/np/images/4/4f/Fish_Umbrella_NH_Icon.png" id="umbrellaNum19" class="images" name="Fish">
+                            <h4>Fish</h4>
+                        </div>
+                        <div id="div20">
+                            <img src="https://dodo.ac/np/images/f/f1/Frog_Umbrella_NH_Icon.png" id="umbrellaNum20" class="images" name="Frog">
+                            <h4>Frog</h4>
+                        </div>
+                        <div id="div21">
+                            <img src="https://dodo.ac/np/images/2/27/Gelato_Umbrella_NH_Icon.png" id="umbrellaNum21" class="images" name="Gelato">
+                            <h4>Gelato</h4>
+                        </div>
+                        <div id="div22">
+                            <img src="https://dodo.ac/np/images/4/48/Ghost_Umbrella_NH_Icon.png" id="umbrellaNum22" class="images" name="Ghost">
+                            <h4>Ghost</h4>
+                        </div>
+                        <div id="div23">
+                            <img src="https://dodo.ac/np/images/c/c7/Grape_Umbrella_NH_Icon.png" id="umbrellaNum23" class="images" name="Grape">
+                            <h4>Grape</h4>
+                        </div>
+                        <div id="div24">
+                            <img src="https://dodo.ac/np/images/5/5e/Green_Chic_Umbrella_NH_Icon.png" id="umbrellaNum24" class="images" name="Green Chic">
+                            <h4>Green Chic</h4>
+                        </div>
+                        <div id="div25">
+                            <img src="https://dodo.ac/np/images/2/22/Green_Umbrella_NH_Icon.png" id="umbrellaNum25" class="images" name="Green">
+                            <h4>Green</h4>
+                        </div>
+                        <div id="div26">
+                            <img src="https://dodo.ac/np/images/c/c7/Hydrangea_Umbrella_NH_Icon.png" id="umbrellaNum26" class="images" name="Hydrangea">
+                            <h4>Hydrangea</h4>
+                        </div>
+                        <div id="div27">
+                            <img src="https://dodo.ac/np/images/8/82/Kabuki_Umbrella_NH_Icon.png" id="umbrellaNum27" class="images" name="Kabuki">
+                            <h4>Kabuki</h4>
+                        </div>
+                        <div id="div28">
+                            <img src="https://dodo.ac/np/images/6/61/Kiwi_Umbrella_NH_Icon.png" id="umbrellaNum28" class="images" name="Kiwi">
+                            <h4>Kiwi</h4>
+                        </div>
+                        <div id="div29">
+                            <img src="https://dodo.ac/np/images/8/84/Lacy_Parasol_NH_Icon.png" id="umbrellaNum29" class="images" name="Lacy">
+                            <h4>Lacy</h4>
+                        </div>
+                        <div id="div30">
+                            <img src="https://dodo.ac/np/images/0/0a/Ladybug_Umbrella_NH_Icon.png" id="umbrellaNum30" class="images" name="Ladybug">
+                            <h4>Ladybug</h4>
+                        </div>
+                        <div id="div31">
+                            <img src="https://dodo.ac/np/images/e/e9/Leaf_Umbrella_NH_Icon.png" id="umbrellaNum31" class="images" name="Leaf">
+                            <h4>Leaf</h4>
+                        </div>
+                        <div id="div32">
+                            <img src="https://dodo.ac/np/images/2/25/Lemon_Umbrella_NH_Icon.png" id="umbrellaNum32" class="images" name="Lemon">
+                            <h4>Lemon</h4>
+                        </div>
+                        <div id="div33">
+                            <img src="https://dodo.ac/np/images/6/65/Logo_Umbrella_NH_Icon.png" id="umbrellaNum33" class="images" name="Logo">
+                            <h4>Logo</h4>
+                        </div>
+                        <div id="div34">
+                            <img src="https://dodo.ac/np/images/8/87/Maple-Leaf_Umbrella_NH_Icon.png" id="umbrellaNum34" class="images" name="Maple-Leaf">
+                            <h4>Maple-Leaf</h4>
+                        </div>
+                        <div id="div35">
+                            <img src="https://dodo.ac/np/images/0/08/Melon_Umbrella_NH_Icon.png" id="umbrellaNum35" class="images" name="Melon">
+                            <h4>Melon</h4>
+                        </div>
+                        <div id="div36">
+                            <img src="https://dodo.ac/np/images/5/54/Mini-Flower-Print_Umbrella_NH_Icon.png" id="umbrellaNum36" class="images" name="Mini-Flower-Print">
+                            <h4>Mini-Flower-Print</h4>
+                        </div>
+                        <div id="div37">
+                            <img src="https://dodo.ac/np/images/c/c7/Mint_Umbrella_NH_Icon.png" id="umbrellaNum37" class="images" name="Mint">
+                            <h4>Mint</h4>
+                        </div>
+                        <div id="div38">
+                            <img src="https://dodo.ac/np/images/0/03/Mush_Umbrella_NH_Icon.png" id="umbrellaNum38" class="images" name="Mush">
+                            <h4>Mush</h4>
+                        </div>
+                        <div id="div39">
+                            <img src="https://dodo.ac/np/images/4/46/Nook_Inc._Umbrella_NH_Icon.png" id="umbrellaNum39" class="images" name="Nook Inc.">
+                            <h4>Nook Inc.</h4>
+                        </div>
+                        <div id="div40">
+                            <img src="https://dodo.ac/np/images/7/72/Orange_Umbrella_NH_Icon.png" id="umbrellaNum40" class="images" name="Orange">
+                            <h4>Orange</h4>
+                        </div>
+                        <div id="div41">
+                            <img src="https://dodo.ac/np/images/3/3a/Panda_Umbrella_NH_Icon.png" id="umbrellaNum41" class="images" name="Panda">
+                            <h4>Panda</h4>
+                        </div>
+                        <div id="div42">
+                            <img src="https://dodo.ac/np/images/4/4f/Paper_Parasol_NH_Icon.png" id="umbrellaNum42" class="images" name="Paper">
+                            <h4>Paper</h4>
+                        </div>
+                        <div id="div43">
+                            <img src="https://dodo.ac/np/images/f/f7/Paradise_Planning_Umbrella_NH_Icon.png" id="umbrellaNum43" class="images" name="Paradise Planning">
+                            <h4>Paradise Planning</h4>
+                        </div>
+                        <div id="div44">
+                            <img src="https://dodo.ac/np/images/0/08/Patterned_Vinyl_Umbrella_NH_Icon.png" id="umbrellaNum44" class="images" name="Patterned Vinyl">
+                            <h4>Patterned Vinyl</h4>
+                        </div>
+                        <div id="div45">
+                            <img src="https://dodo.ac/np/images/8/8c/Peach_Umbrella_NH_Icon.png" id="umbrellaNum45" class="images" name="Peach Umbrella">
+                            <h4>Peach Umbrella</h4>
+                        </div>
+                        <div id="div46">
+                            <img src="https://dodo.ac/np/images/c/c4/Pear_Umbrella_NH_Icon.png" id="umbrellaNum46" class="images" name="Pear">
+                            <h4>Pear</h4>
+                        </div>
+                        <div id="div47">
+                            <img src="https://dodo.ac/np/images/5/5d/Petal_Parasol_NH_Icon.png" id="umbrellaNum47" class="images" name="Petal">
+                            <h4>Petal</h4>
+                        </div>
+                        <div id="div48">
+                            <img src="https://dodo.ac/np/images/9/93/Picnic_Umbrella_NH_Icon.png" id="umbrellaNum48" class="images" name="Picnic">
+                            <h4>Picnic</h4>
+                        </div>
+                        <div id="div49">
+                            <img src="https://dodo.ac/np/images/2/2d/Pineapple_Umbrella_NH_Icon.png" id="umbrellaNum49" class="images" name="Pineapple">
+                            <h4>Pineapple</h4>
+                        </div>
+                        <div id="div50">
+                            <img src="https://dodo.ac/np/images/8/8c/Pink_Shiny-Bows_Parasol_NH_Icon.png" id="umbrellaNum50" class="images" name="Pink Shiny-Bows">
+                            <h4>Pink Shiny-Bows</h4>
+                        </div>
+                        <div id="div51">
+                            <img src="https://dodo.ac/np/images/8/8d/Pink_Umbrella_NH_Icon.png" id="umbrellaNum51" class="images" name="Pink">
+                            <h4>Pink</h4>
+                        </div>
+                        <div id="div52">
+                            <img src="https://dodo.ac/np/images/1/1d/Purple_Chic_Umbrella_NH_Icon.png" id="umbrellaNum52" class="images" name="Purple Chic">
+                            <h4>Purple Chic</h4>
+                        </div>
+                        <div id="div53">
+                            <img src="https://dodo.ac/np/images/e/e0/Purple_Shiny-Bows_Parasol_NH_Icon.png" id="umbrellaNum53" class="images" name="Purple Shiny-Bows">
+                            <h4>Purple Shiny-Bows</h4>
+                        </div>
+                        <div id="div54">
+                            <img src="https://dodo.ac/np/images/7/77/Rainbow_Umbrella_NH_Icon.png" id="umbrellaNum54" class="images" name="Rainbow Umbrella">
+                            <h4>Rainbow Umbrella</h4>
+                        </div>
+                        <div id="div55">
+                            <img src="https://dodo.ac/np/images/c/c5/Raindrop_Umbrella_NH_Icon.png" id="umbrellaNum55" class="images" name="Raindrop">
+                            <h4>Raindrop</h4>
+                        </div>
+                        <div id="div56">
+                            <img src="https://dodo.ac/np/images/f/fa/Red_Chic_Umbrella_NH_Icon.png" id="umbrellaNum56" class="images" name="Red Chic">
+                            <h4>Red Chic</h4>
+                        </div>
+                        <div id="div57">
+                            <img src="https://dodo.ac/np/images/5/56/Red_Umbrella_NH_Icon.png" id="umbrellaNum57" class="images" name="Red">
+                            <h4>Red</h4>
+                        </div>
+                        <div id="div58">
+                            <img src="https://dodo.ac/np/images/8/87/Snowflake_Umbrella_NH_Icon.png" id="umbrellaNum58" class="images" name="Snowflake">
+                            <h4>Snowflake</h4>
+                        </div>
+                        <div id="div59">
+                            <img src="https://dodo.ac/np/images/6/6a/Spider_Umbrella_NH_Icon.png" id="umbrellaNum59" class="images" name="Spider">
+                            <h4>Spider</h4>
+                        </div>
+                        <div id="div60">
+                            <img src="https://dodo.ac/np/images/4/45/Strawberry_Umbrella_NH_Icon.png" id="umbrellaNum60" class="images" name="Strawberry">
+                            <h4>Strawberry</h4>
+                        </div>
+                        <div id="div61">
+                            <img src="https://dodo.ac/np/images/4/4d/Striped_Umbrella_NH_Icon.png" id="umbrellaNum61" class="images" name="Striped">
+                            <h4>Striped</h4>
+                        </div>
+                        <div id="div62">
+                            <img src="https://dodo.ac/np/images/1/1d/Sunny_Parasol_NH_Icon.png" id="umbrellaNum62" class="images" name="Sunny">
+                            <h4>Sunny</h4>
+                        </div>
+                        <div id="div63">
+                            <img src="https://dodo.ac/np/images/4/4a/Tartan-Check_Umbrella_NH_Icon.png" id="umbrellaNum63" class="images" name="Tartan-Check">
+                            <h4>Tartan-Check</h4>
+                        </div>
+                        <div id="div64">
+                            <img src="https://dodo.ac/np/images/c/c7/Toad_Parasol_NH_Icon.png" id="umbrellaNum64" class="images" name="Toad">
+                            <h4>Toad</h4>
+                        </div>
+                        <div id="div65">
+                            <img src="https://dodo.ac/np/images/6/64/Two-Tone_Umbrella_NH_Icon.png" id="umbrellaNum65" class="images" name="Two-Tone">
+                            <h4>Two-Tone</h4>
+                        </div>
+                        <div id="div66">
+                            <img src="https://dodo.ac/np/images/b/bd/Vinyl_Umbrella_NH_Icon.png" id="umbrellaNum66" class="images" name="Vinyl">
+                            <h4>Vinyl</h4>
+                        </div>
+                        <div id="div67">
+                            <img src="https://dodo.ac/np/images/b/b6/Watermelon_Umbrella_NH_Icon.png" id="umbrellaNum67" class="images" name="Watermelon">
+                            <h4>Watermelon</h4>
+                        </div>
+                        <div id="div68">
+                            <img src="https://dodo.ac/np/images/7/7b/White_Shiny-Bows_Parasol_NH_Icon.png" id="umbrellaNum68" class="images" name="White Shiny-Bows">
+                            <h4>White Shiny-Bows</h4>
+                        </div>
+        
+            
+                    </main>
+                </section>
+
+			</nav>
+    </header>
+
+    
+
+
+    <footer>
+        <section id="footerDiv">
+            <p class="copyright">&copy; <a href='https://www.christhompsondev.com/' target="_blank">Chris Thompson</a>. All rights reserved.</p>
+        </section>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

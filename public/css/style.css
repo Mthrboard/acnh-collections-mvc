@@ -1,0 +1,233 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+.clear {
+	clear: both;
+}
+/******************************************
+/* BASE STYLES
+/*******************************************/
+html {
+     width: 100%;
+     display: block;
+     font-size: 62.5%;
+     /* background-image: url(/public/images/bg-phone.jpg); */
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-attachment: fixed;
+}
+body {
+     font-family: 'Oswald', sans-serif;
+     background: #5BCFF4;
+     font-size: 2rem;
+}
+.topBar {
+     background: white;
+     margin-top: 0;
+     display: flex;
+     position: relative
+}
+#headerTopLeft {
+     width: 50%;
+     padding: 1% 0 1% 1%;
+}
+#headerTopRight {
+     width: 50%;
+     text-align: right;
+     padding: 0 1% 1% 0;
+     position: absolute;
+     bottom: 0;
+     right: 0;
+}
+#headerImg {
+     width: 100px;
+     /* display: block; */
+     /* margin-right: auto; */
+}
+
+/* ************            ************* */
+#clear {
+     width: 100%;
+}
+#clearTasks {
+     width: 20%;
+     height: 20%;
+     font-size: 2rem;
+}
+main {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-around;
+     width: 100%;
+     margin-top: 40px;
+     
+}
+#progress {
+     display: flex;
+     align-items: center;
+}
+#collectionText {
+     width: 100%;
+     text-align: center;
+     font-size: 6rem;
+     margin: .5%;
+}
+#percent {
+     width: 100%;
+     text-align: center;
+     font-size: 4rem;
+     margin: .5%;
+}
+#file {
+     width: 80%;
+     margin: 0 auto;
+     height: 50px;
+}
+div {
+     width: 100px;
+     height: 100px;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-around;
+     text-align: center;
+     font-size: 2rem;
+     margin: 1%;
+     border-radius: 15%;
+}
+div img {
+     height: 65%;
+     width: 65%;
+     margin: 2% 15%;
+}
+div h4 {
+     width: 100%;
+     font-size: 2rem;
+     font-weight: 900;
+     flex: 1 0 100%;
+
+}
+
+/* ************SECTION TABS************* */
+.mytabs {
+     display: flex;
+     flex-wrap: wrap;
+     max-width: 99%;
+     margin: 10px auto;
+     padding: 5px;
+     font-size: 2rem;
+}
+.mytabs input[type="radio"] {
+     display: none;
+     font-size: 2rem;
+}
+.mytabs label {
+     padding: 8px;
+     background: #e2e2e2;
+     font-weight: bold;
+     font-size: 2rem;
+}
+.mytabs .tab {
+     width: 100%;
+     padding: 20px;
+     background: white;
+     order: 1;
+     display: none;
+     border-radius: 0;
+}
+.mytabs .tab h2 {
+     font-size: 2rem;
+     text-align: center;
+}
+.mytabs input[type="radio"]:checked + label + .tab {
+     display: block;
+}
+.mytabs input[type="radio"]:checked + label {
+     background: white;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+#collectionText, #percent {
+     background: none;
+     font-size: 2rem;
+}
+
+#footerDiv {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+     margin: 30px 0;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+/* @media (min-width: 700px) {
+     html {
+          background-image: url(/images/bg-wide.jpg);
+     }
+     
+} */
