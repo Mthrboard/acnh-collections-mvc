@@ -5,12 +5,15 @@ const UserSchema = new mongoose.Schema({
   userName: { type: String, unique: true },
   email: { type: String, unique: true },
   password: String,
-  complete: { type: Array, unique: false }
+  complete: { type: Array, unique: false },
+  completedDivs: {
+    type: [String],
+  }
 })
 
 
 // Password hash middleware.
- 
+
  UserSchema.pre('save', function save(next) {
   const user = this
   if (!user.isModified('password')) { return next() }

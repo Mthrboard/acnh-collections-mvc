@@ -1,19 +1,16 @@
-const Todo = require('../models/Todo')
+const User = require('../models/User')
 
 module.exports = {
-    getTodos: async (req,res)=>{
-        console.log(req.user)
+     getTodos: async (req,res)=>{
         try{
-            const todoItems = await Todo.find({userId:req.user.id})
-            const itemsLeft = await Todo.countDocuments({userId:req.user.id,completed: false})
-            res.render('todos.ejs', {todos: todoItems, left: itemsLeft, user: req.user})
+            res.render('todos.ejs', {user: req.user})
         }catch(err){
             console.log(err)
         }
     },
-    createTodo: async (req, res)=>{
+    /*createTodo: async (req, res)=>{
         try{
-            await Todo.create({todo: req.body.todoItem, completed: false, userId: req.user.id})
+            await Todo.create({todo: req.body.completeIdFromJSFile, userId: req.user.id})
             console.log('Todo has been added!')
             res.redirect('/todos')
         }catch(err){
@@ -22,7 +19,7 @@ module.exports = {
     },
     markComplete: async (req, res)=>{
         try{
-            await Todo.findOneAndUpdate({_id:req.body.todoIdFromJSFile},{
+            await Todo.create({todo: req.body.completeIdFromJSFile},{
                 completed: true
             })
             console.log('Marked Complete')
@@ -51,5 +48,26 @@ module.exports = {
         }catch(err){
             console.log(err)
         }
+    } */
+    addDivId: async (req, res) =>{
+        try{
+          await User.findOneAndUpdate({_id: req.body.userId},
+            { $addToSet: { completedDivs: req.body.divId }
+          })
+          res.json('Added Div ID')
+        } catch(err) {
+          console.log(err)
+        }
+    },
+
+    removeDivId: async (req, res) =>{
+        try{
+          await User.findOneAndUpdate({_id: req.body.userId},
+            {$pull: { completedDivs: req.body.divId}
+          })
+          res.json('Removed Div ID')
+        } catch(err) {
+          console.log(err)
+        }
     }
-}    
+}

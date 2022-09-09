@@ -18,12 +18,12 @@
         <section id="headerTopLeft">
             <a href="/"><img id="headerImg" src="/images/acnhLogo.png" alt="Animal Crossing: New Horizons"></a>
         </section>
-        
+
         <section id="headerTopRight">
-            <h2><%= user.userName %></h2>
+            <h2 data-user-id='<%= user._id %>'><%= user.userName %></h2>
             <a href="/logout">Logout</a>
-        </section>    
-        
+        </section>
+
     </header>
     <header class="navBar">
 			<nav class="mytabs">
@@ -43,8 +43,7 @@
                         <progress id="file" max="12" value="0"> 0% </progress>
                     </main>
                     <main id="taskmain1">
-				
-                        <div id="taskdiv1" class="false">
+                        <div id="taskdiv1" class="<%= (user.completedDivs.includes('taskdiv1') ? 'true' : 'false')  %>">
                             <img src="images/nookStop.PNG" id="task1" class="images" name="Check In At Nook Stop">
                             <h4>Check In At Nook Stop</h4>
                         </div>
@@ -84,7 +83,7 @@
                             <img src="images/neighbors.png" id="task10" class="images" name="Talk to Neighbors">
                             <h4>Talk to Neighbors</h4>
                         </div>
-                        
+
                         <div id="taskdiv11" class="false">
                             <img src="images/Harvey.png" id="task11" class="images" name="Harvey">
                             <h4>Visit Harv's Island</h4>
@@ -94,8 +93,8 @@
                             <h4>Have Fun</h4>
                             <span></span>
                         </div>
-                        
-            
+
+
                     </main>
                 </section>
 
@@ -112,7 +111,7 @@
                     </main>
                     <main id="musicMain1">
                             <div id="div1"><img src="https://acnhapi.com/v1/images/songs/1" id="image1" class="images"><h4>Agent K.K.</h4></div><div id="div2"><img src="https://acnhapi.com/v1/images/songs/2" id="image2" class="images"><h4>Aloha K.K.</h4></div><div id="div3"><img src="https://acnhapi.com/v1/images/songs/3" id="image3" class="images"><h4>Animal City</h4></div><div id="div4"><img src="https://acnhapi.com/v1/images/songs/4" id="image4" class="images"><h4>Bubblegum K.K.</h4></div><div id="div5"><img src="https://acnhapi.com/v1/images/songs/5" id="image5" class="images"><h4>Café K.K.</h4></div><div id="div6"><img src="https://acnhapi.com/v1/images/songs/6" id="image6" class="images"><h4>Comrade K.K.</h4></div><div id="div7"><img src="https://acnhapi.com/v1/images/songs/7" id="image7" class="images"><h4>DJ K.K.</h4></div><div id="div8"><img src="https://acnhapi.com/v1/images/songs/8" id="image8" class="images"><h4>Drivin'</h4></div><div id="div9"><img src="https://acnhapi.com/v1/images/songs/9" id="image9" class="images"><h4>Farewell</h4></div><div id="div10"><img src="https://acnhapi.com/v1/images/songs/10" id="image10" class="images"><h4>Forest Life</h4></div>
-                            
+
                             <div id="div11"><img src="https://acnhapi.com/v1/images/songs/11" id="image11" class="images"><h4>Go K.K. Rider</h4></div><div id="div12"><img src="https://acnhapi.com/v1/images/songs/12" id="image12" class="images"><h4>Hypno K.K.</h4></div><div id="div13"><img src="https://acnhapi.com/v1/images/songs/13" id="image13" class="images"><h4>I Love You</h4></div><div id="div14"><img src="https://acnhapi.com/v1/images/songs/14" id="image14" class="images"><h4>Imperial K.K.</h4></div><div id="div15"><img src="https://acnhapi.com/v1/images/songs/15" id="image15" class="images"><h4>K.K. Adventure</h4></div>
                             <div id="div16"><img src="https://acnhapi.com/v1/images/songs/16" id="image16" class="images"><h4>K.K. Aria</h4></div>
                             <div id="div17"><img src="https://acnhapi.com/v1/images/songs/17" id="image17" class="images"><h4>K.K. Ballad</h4></div>
@@ -620,15 +619,15 @@
                             <img src="https://dodo.ac/np/images/7/7b/White_Shiny-Bows_Parasol_NH_Icon.png" id="umbrellaNum68" class="images" name="White Shiny-Bows">
                             <h4>White Shiny-Bows</h4>
                         </div>
-        
-            
+
+
                     </main>
                 </section>
 
 			</nav>
     </header>
 
-    
+
 
 
     <footer>
